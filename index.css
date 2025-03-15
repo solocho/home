@@ -1,59 +1,63 @@
-body{
-    background-color: white;
-    padding-top:200px;
+/* ✅ General Mobile Optimizations */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #e0f0f5, #c8e1e9);
+    padding-top: 200px;
     padding-bottom: 0px;
-    
-        background: linear-gradient(180deg, #e0f0f5, #c8e1e9);
-}
-    
-    
-    
-    
-
-.container{
-    
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        margin-bottom: 50px;
 }
 
-.body-logo{
-    max-width:600px;
-    height:700px;
+/* ✅ Responsive Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin-bottom: 50px;
+}
+
+/* ✅ Logo Image */
+.body-logo {
+    max-width: 100%;
+    height: auto;
     border-radius: 500px;
-    
 }
-.left-side{
+
+/* ✅ Left Side (Form Section) */
+.left-side {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left:150px;
-   
-    
+    margin-left: 150px;
+}
 
-}
-.user-bar{
-    width:200px;
+/* ✅ Input Fields */
+.user-bar,
+.pass-bar {
+    width: 100%;
+    max-width: 250px;
     margin-bottom: 10px;
     border-radius: 20px;
     padding: 12px 15px;
     cursor: pointer;
+    font-size: 16px;
 }
-.pass-bar{
-    width:200px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    padding: 12px 15px;
-    border:solid;
-    border-color: rgb(44, 33, 33);
-    cursor: pointer;
+
+.pass-bar {
+    border: solid 1px rgb(44, 33, 33);
 }
+
+/* ✅ Animated Glowing Text */
 @keyframes glow-text {
     0% { text-shadow: 0 0 5px rgba(255, 77, 77, 0.8); }
     50% { text-shadow: 0 0 20px rgba(255, 204, 0, 1); }
     100% { text-shadow: 0 0 5px rgba(255, 77, 77, 0.8); }
 }
-.login-text{
+
+.login-text {
     font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
@@ -63,106 +67,92 @@ body{
     position: relative;
     animation: glow-text 2s infinite alternate;
     transition: transform 0.3s ease-in-out;
-    margin-right:350px;
+    margin-right: 350px;
 }
 
-
-
-
-
-.sign-in{
-    width:200px;
-    margin-left:20px;
+/* ✅ Sign-in Button */
+.sign-in {
+    width: 100%;
+    max-width: 250px;
     border-radius: 20px;
     padding: 12px 15px;
     background-color: rgb(40, 40, 185);
-    color:white;
-    
-
-}
-.sign-in:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
-.below{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
-
-}
-.sign-up{
-    margin-right:100px;
-    color:blue;
-    opacity:1
-}
-.sign-up:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-.sigh-up:active{
-    opacity:0;
-}
-.forgot:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-h1{
-    height: 100px;
-    color:black;
-    
-    display: grid;
-    grid-template-columns: 1000px 1fr;
-    position:fixed;
-    right: 0;
-    left:0;
-    top:0;
-    background-color: black;
-    margin-top:0;
-    color:white;
-    
-}
-.header-log{
-    border-radius: 50px;
-    height:70px;
-}
-.left-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-weight: lighter;
-    font-size: 15px;
-    transition:text-decoration 1s;
-}
-.h-l-t{
-    display: inline-block;
-    font-size:20px;
-    margin-left:10px;
-    font-weight:lighter;
-}
-.b-name{
+    color: white;
+    font-size: 16px;
     font-weight: bold;
-    font-family: lobster;
-    font-size:20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.slogan{
-    font-size:10px;
-    
-   
+
+.sign-in:hover {
+    text-decoration: underline;
+    background-color: rgb(30, 30, 150);
 }
-.left-header p{
-    transition:text-decoration 1s;
+
+/* ✅ Sign-up and Forgot Password Links */
+.sign-up,
+.forgot {
+    color: blue;
+    text-align: center;
+    font-size: 14px;
 }
-.left-header p:hover{
+
+.sign-up:hover,
+.forgot:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ✅ Navbar */
+h1 {
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: black;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* ✅ Header Logo */
+.header-log {
+    border-radius: 50px;
+    height: 70px;
+}
+
+/* ✅ Header Left Section */
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.left-header p {
+    transition: text-decoration 1s;
+    color: white;
+    font-size: 16px;
+}
+
+.left-header p:hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
+/* ✅ Product Grid */
 .selling {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     text-align: center;
+    padding: 20px;
 }
 
+/* ✅ Product Card */
 .item {
     background: #fff;
     padding: 15px;
@@ -171,13 +161,18 @@ h1{
     transition: transform 0.3s ease-in-out;
 }
 
+.item:hover {
+    transform: translateY(-5px);
+}
+
+/* ✅ Product Image */
 .item img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Order Button */
+/* ✅ Order Button */
 .order-btn {
     margin-top: 10px;
     padding: 10px 15px;
@@ -196,16 +191,10 @@ h1{
     transform: scale(1.05);
 }
 
-/* Hover effect */
-.item:hover {
-    transform: translateY(-5px);
-}
-
-/* Styling for the welcome text */
+/* ✅ Welcome Text */
 .left-text {
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;
     text-transform: uppercase;
     text-align: left;
     margin-bottom: 5px;
@@ -213,9 +202,11 @@ h1{
     background: linear-gradient(90deg, #ff8a00, #e52e71);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* Styling for the slogan */
+/* ✅ Slogan */
 .left-slogan {
     font-size: 1.2rem;
     font-style: italic;
@@ -224,26 +215,68 @@ h1{
     margin-bottom: 20px;
     padding-left: 10px;
     border-left: 4px solid #e52e71;
-}
-
-/* Add a smooth fade-in animation */
-.left-text, .left-slogan {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* Fade-in keyframes */
+/* ✅ Fade-in Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* ✅ Links Styling */
 a {
-    color: white; /* Change this to any color you want */
-    text-decoration: none; /* Removes underline */
+    color: white;
+    text-decoration: none;
 }
 
 a:hover {
-    color: red; /* Change color when hovered */
+    color: red;
 }
 
+/* ✅ Mobile-Friendly Adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 150px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .left-side {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .login-text {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .sign-in {
+        max-width: 200px;
+    }
+
+    .selling {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ✅ Small Phones */
+@media screen and (max-width: 480px) {
+    .selling {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .login-text {
+        font-size: 20px;
+    }
+
+    .sign-in {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
