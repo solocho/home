@@ -1,0 +1,249 @@
+body{
+    background-color: white;
+    padding-top:200px;
+    padding-bottom: 0px;
+    
+        background: linear-gradient(180deg, #e0f0f5, #c8e1e9);
+}
+    
+    
+    
+    
+
+.container{
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        margin-bottom: 50px;
+}
+
+.body-logo{
+    max-width:600px;
+    height:700px;
+    border-radius: 500px;
+    
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left:150px;
+   
+    
+
+}
+.user-bar{
+    width:200px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+.pass-bar{
+    width:200px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 12px 15px;
+    border:solid;
+    border-color: rgb(44, 33, 33);
+    cursor: pointer;
+}
+@keyframes glow-text {
+    0% { text-shadow: 0 0 5px rgba(255, 77, 77, 0.8); }
+    50% { text-shadow: 0 0 20px rgba(255, 204, 0, 1); }
+    100% { text-shadow: 0 0 5px rgba(255, 77, 77, 0.8); }
+}
+.login-text{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff4d4d;
+    text-align: center;
+    letter-spacing: 3px;
+    position: relative;
+    animation: glow-text 2s infinite alternate;
+    transition: transform 0.3s ease-in-out;
+    margin-right:350px;
+}
+
+
+
+
+
+.sign-in{
+    width:200px;
+    margin-left:20px;
+    border-radius: 20px;
+    padding: 12px 15px;
+    background-color: rgb(40, 40, 185);
+    color:white;
+    
+
+}
+.sign-in:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.below{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+
+}
+.sign-up{
+    margin-right:100px;
+    color:blue;
+    opacity:1
+}
+.sign-up:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.sigh-up:active{
+    opacity:0;
+}
+.forgot:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+h1{
+    height: 100px;
+    color:black;
+    
+    display: grid;
+    grid-template-columns: 1000px 1fr;
+    position:fixed;
+    right: 0;
+    left:0;
+    top:0;
+    background-color: black;
+    margin-top:0;
+    color:white;
+    
+}
+.header-log{
+    border-radius: 50px;
+    height:70px;
+}
+.left-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: lighter;
+    font-size: 15px;
+    transition:text-decoration 1s;
+}
+.h-l-t{
+    display: inline-block;
+    font-size:20px;
+    margin-left:10px;
+    font-weight:lighter;
+}
+.b-name{
+    font-weight: bold;
+    font-family: lobster;
+    font-size:20px;
+}
+.slogan{
+    font-size:10px;
+    
+   
+}
+.left-header p{
+    transition:text-decoration 1s;
+}
+.left-header p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.selling {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+    text-align: center;
+}
+
+.item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Order Button */
+.order-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+    transform: scale(1.05);
+}
+
+/* Hover effect */
+.item:hover {
+    transform: translateY(-5px);
+}
+
+/* Styling for the welcome text */
+.left-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Styling for the slogan */
+.left-slogan {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ccc;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 4px solid #e52e71;
+}
+
+/* Add a smooth fade-in animation */
+.left-text, .left-slogan {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+a {
+    color: white; /* Change this to any color you want */
+    text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+    color: red; /* Change color when hovered */
+}
+
